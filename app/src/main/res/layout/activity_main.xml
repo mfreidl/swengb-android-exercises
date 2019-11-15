@@ -37,4 +37,12 @@
             android:text="Rating" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/open_lessons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lessons"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="199dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
