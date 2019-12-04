@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LessonRatingActivity"></activity>
-        <activity android:name=".LessonListActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".RatingActivity"
-            android:parentActivityName=".LessonListActivity"/>
+        <activity android:name=".HigherOrderActivity"></activity>
+        <activity android:name=".LessonRatingActivity" />
+        <activity
+            android:name=".LessonListActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RatingActivity"
+            android:parentActivityName=".LessonListActivity" />
         <activity android:name=".ViewsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

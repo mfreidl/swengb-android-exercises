@@ -12,7 +12,7 @@ object LessonRepository {
                 "09.10.2019",
                 "Introduction",
                 LessonType.LECTURE,
-                listOf( lecturerIllis, lecturerBloder ),
+                listOf(lecturerIllis, lecturerBloder ),
                 mutableListOf()
             ),
             Lesson("1",
@@ -99,6 +99,6 @@ object LessonRepository {
     }
 
     fun rateLesson(id: String, rating: LessonRating) {
-        // TODO ADD Rating to lesson
+        lessonById(id)?.ratings?.add(rating)
     }
 }

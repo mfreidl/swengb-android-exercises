@@ -1,5 +1,6 @@
 package at.fh.swengb.loggingviewsandactivity
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -11,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class LessonListActivity : AppCompatActivity() {
     val lessonAdapter = LessonAdapter() {val intent = Intent(this, LessonRatingActivity::class.java)
         intent.putExtra(EXTRA_LESSON_ID, it.id)
-        startActivity(intent)
+        startActivityForResult(intent, ADD_OR_EDIT_RATING_REQUEST)
 
     }
 
@@ -25,5 +26,13 @@ class LessonListActivity : AppCompatActivity() {
     }
     companion object {
         val EXTRA_LESSON_ID = "LESSON_ID_EXTRA"
+        val ADD_OR_EDIT_RATING_REQUEST = 1
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == ADD_OR_EDIT_RATING_REQUEST && resultCode == Activity.RESULT_OK) {
+            lessonAdapter.updateList(LessonRepository.lessonsList())
+        }
     }
 }
