@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoggingViewsAndActivity</string>
+    <string name="share">Teilen</string>
+    <string name="logout">Ausloggen</string>
+    <string name="play">Start</string>
+    <string name="stop">Stop</string>
+    <string name="save">Speichern</string>
+</resources>

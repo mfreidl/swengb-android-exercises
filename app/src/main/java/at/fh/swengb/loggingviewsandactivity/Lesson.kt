@@ -2,8 +2,10 @@ package at.fh.swengb.loggingviewsandactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.squareup.moshi.JsonClass
 
-class Lesson(val id : String, val name : String, val date : String, val topic : String, val type: LessonType, val lecturers : List<Lecturer>, val ratings: MutableList<LessonRating>) {
+@JsonClass(generateAdapter = true)
+class Lesson(val id : String, val name : String, val date : String, val topic : String, val type: LessonType, val lecturers : List<Lecturer>, val ratings: MutableList<LessonRating>, val imageUrl : String) {
     fun ratingAverage() : Double{
         var average = ratings.map { it.ratingValue }.average()
 

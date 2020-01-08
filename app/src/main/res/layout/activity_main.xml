@@ -16,21 +16,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MyApp.MyButton"
             android:id="@+id/share_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Share" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MyApp.MyButton"
             android:id="@+id/open_views"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Views" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MyApp.MyButton"
             android:id="@+id/open_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,7 +41,8 @@
             android:text="Rating" />
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MyApp.MyButton"
         android:id="@+id/open_lessons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,7 +52,8 @@
         app:layout_constraintEnd_toStartOf="@+id/open_higher_order"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MyApp.MyButton"
         android:id="@+id/open_higher_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,5 +63,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/open_lessons"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/img_20190903_113842"
+        tools:layout_editor_absoluteY="3dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import at.fh.swengb.loggingviewsandactivity.LessonListActivity.Companion.ADD_OR_EDIT_RATING_REQUEST
+import com.squareup.moshi.JsonClass
 import kotlinx.android.synthetic.main.activity_main.*
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         open_rating.setOnClickListener {
             val intent = Intent(this, RatingActivity::class.java)
+            startActivity(intent)
         }
 
         open_lessons.setOnClickListener {
@@ -45,10 +46,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        open_higher_order.setOnClickListener {
+        /*open_higher_order.setOnClickListener {
             val intent = Intent(this, HigherOrderActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 
     override fun onStart() {
