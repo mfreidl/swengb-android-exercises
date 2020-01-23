@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Share" />
+            android:text="@string/share" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MyApp.MyButton"
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Views" />
+            android:text="@string/views" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MyApp.MyButton"
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Rating" />
+            android:text="@string/ratings" />
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:text="Lessons"
+        android:text="@string/lessons"
         app:layout_constraintBaseline_toBaselineOf="@+id/open_higher_order"
         app:layout_constraintEnd_toStartOf="@+id/open_higher_order"
         app:layout_constraintStart_toStartOf="parent" />
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="212dp"
         android:layout_marginEnd="3dp"
-        android:text="Higher ORDER"
+        android:text="@string/higher_order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/open_lessons"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,4 +1,4 @@
-package at.fh.swengb.loggingviewsandactivity
+package at.fh.swengb.loggingviewsandactivity.common
 
 import com.squareup.moshi.Moshi
 import retrofit2.Call
@@ -19,7 +19,8 @@ object LessonApi {
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .baseUrl("https://lessons.bloder.xyz")
             .build()
-        retrofitService = retrofit.create(LessonApiService::class.java)
+        retrofitService = retrofit.create(
+            LessonApiService::class.java)
     }
 }
 interface LessonApiService {

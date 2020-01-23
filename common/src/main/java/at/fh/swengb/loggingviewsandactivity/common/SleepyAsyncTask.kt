@@ -1,4 +1,4 @@
-package at.fh.swengb.loggingviewsandactivity
+package at.fh.swengb.loggingviewsandactivity.common
 
 import android.os.AsyncTask
 import android.util.Log

@@ -1,4 +1,4 @@
-package at.fh.swengb.loggingviewsandactivity
+package at.fh.swengb.loggingviewsandactivity.common
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

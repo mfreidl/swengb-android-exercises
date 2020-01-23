@@ -1,4 +1,4 @@
-package at.fh.swengb.loggingviewsandactivity
+package at.fh.swengb.loggingviewsandactivity.common
 
 import retrofit2.Call
 import retrofit2.Callback

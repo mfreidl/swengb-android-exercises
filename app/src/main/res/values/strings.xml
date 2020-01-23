@@ -5,4 +5,9 @@
     <string name="play">Play</string>
     <string name="stop">Stop</string>
     <string name="save">Save</string>
+    <string name="lessons">Lessons</string>
+    <string name="higher_order">HigherOrder</string>
+    <string name="sharee">Share</string>
+    <string name="views">Views</string>
+    <string name="ratings">Ratings</string>
 </resources>

@@ -3,7 +3,7 @@ package at.fh.swengb.loggingviewsandactivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.squareup.moshi.JsonClass
+import at.fh.swengb.loggingviewsandactivity.common.Rating
 import kotlinx.android.synthetic.main.activity_rating.*
 
 class RatingActivity : AppCompatActivity() {

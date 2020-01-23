@@ -4,9 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import at.fh.swengb.loggingviewsandactivity.common.Lesson
 import com.bumptech.glide.Glide
-import com.squareup.moshi.JsonClass
-import kotlinx.android.synthetic.main.item_lesson.*
 import kotlinx.android.synthetic.main.item_lesson.view.*
 
 class LessonAdapter(val clickListener: (lesson: Lesson) -> Unit): RecyclerView.Adapter<LessonViewHolder>() {

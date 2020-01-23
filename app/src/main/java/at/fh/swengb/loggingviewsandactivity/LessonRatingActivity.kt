@@ -1,16 +1,17 @@
 package at.fh.swengb.loggingviewsandactivity
 
 import android.app.Activity
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import com.squareup.moshi.JsonClass
+import at.fh.swengb.loggingviewsandactivity.common.LessonRating
+import at.fh.swengb.loggingviewsandactivity.common.LessonRepository
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_lesson_rating.*
-import kotlinx.android.synthetic.main.activity_rating.*
+import java.math.RoundingMode
 
 class LessonRatingActivity : AppCompatActivity() {
 
@@ -30,6 +31,14 @@ class LessonRatingActivity : AppCompatActivity() {
             success = {
                 lesson_rating_header.text = it.name
                 lessonName = it.name
+                Glide
+                    .with(imageView)
+                    .load(it.imageUrl)
+                    .into(imageView)
+                item_lesson_avg_rating_bar2.rating = it.ratingAverage().toFloat()
+                item_lesson_avg_rating_value.text = it.ratingAverage().toBigDecimal().setScale(2, RoundingMode.CEILING).toString()
+                comments.text = it.ratings.filter { it.feedback != "" }.joinToString { it.feedback + "\n\n" }
+
             },
             error = {
                 Log.e("ERROR", it)
@@ -38,7 +47,8 @@ class LessonRatingActivity : AppCompatActivity() {
             rate_lesson.setOnClickListener{
                 val myRating = lesson_rating_bar.rating.toDouble()
                 val myFeedback = lesson_feedback.text.toString()
-                val lessonRating = LessonRating(myRating,myFeedback)
+                val lessonRating =
+                    LessonRating(myRating, myFeedback)
 
                 LessonRepository.rateLesson(lessonId, lessonRating)
 

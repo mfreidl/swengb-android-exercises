@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import at.fh.swengb.loggingviewsandactivity.LessonListActivity.Companion.ADD_OR_EDIT_RATING_REQUEST
+import at.fh.swengb.loggingviewsandactivity.common.SharedClass
 import com.squareup.moshi.JsonClass
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    val str = SharedClass()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         Log.i("MyActivity", "onCreate")
         Log.w("MyActivity", "onCreate")
         Log.e("MyActivity", "onCreate")
+        Log.e("shared","$str")
 
         share_main.setOnClickListener {
             val sendIntent: Intent = Intent().apply {
